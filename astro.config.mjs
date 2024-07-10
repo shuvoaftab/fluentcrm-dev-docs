@@ -7,9 +7,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'FluentCRM Docs',
-			social: {
-				github: 'https://github.com/shuvoaftab/fluentcrm-dev-docs',
-			},
+			favicon: './src/assets/favicon/favicon.ico',
+			// social: {
+			// 	github: 'https://github.com/shuvoaftab/fluentcrm-dev-docs',
+			// },
 			customCss: [
 				// Relative path to your custom CSS file
 				'./src/styles/custom.css',
