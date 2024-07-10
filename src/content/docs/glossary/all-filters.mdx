@@ -6,7 +6,8 @@ description: Glossary of All Filter Hooks for FluentCRM.
 ## Free Version (v2.9.0 - July, 2024)
 
 ### `app/Functions/helpers.php`
-
+:::note[17]
+:::
     ```bash
     fluent_crm/contact_statuses
     fluent_crm/contact_editable_statuses
@@ -36,4 +37,90 @@ description: Glossary of All Filter Hooks for FluentCRM.
 
     ```bash
     fluent_crm/core_menu_items
+    fluent_crm/menu_items
+    fluent_crm/skip_no_conflict
+    fluent_crm_asset_listed_slugs
+    fluent_crm/countries
+    fluent_crm/form_submission_providers
+    fluentcrm-support_tickets_providers
+    fluentcrm_is_require_verify
+    fluent_crm/fluentmail_suggest
+    fluent_crm/funnel_icons
+    fluentcrm_advanced_filter_suggestions
+    fluentcrm_commerce_provider
+    fluentcrm_currency_sign
+    fluent_crm/admin_vars
+    image_size_names_choose
+    fluent_crm/allowed_block_types
+    fluent_crm/verfied_email_senders
+    fluent_crm/full_sidebar_menu_items
+    fluent_crm/moment_date_time_format
+    ```
+### `app/Hooks/Handlers/AutoSubscribeHandler.php`
+
+    ```bash
+    fluent_crm/comment_form_subscribe_settings
+    ```
+### `app/Hooks/Handlers/ExternalPages.php`
+
+    ```bash
+    fluent_crm/soft_bounce_limit
+    fluent_crm/unsubscribe_texts
+    fluent_crm/unsubscribe_reasons
+    fluent_crm/parse_campaign_email_text
+    fluent_crm/unsub_response_message
+    fluent_crm/unsub_redirect_url
+    fluent_crm/will_use_cookie
+    fluent_crm/double_optin_options
+    fluent_crm/parse_extended_crm_text
+    fluent_crm/incoming_webhook_data
+    fluent_crm/webhook_contact_data
+    fluent_crm/will_auto_unsubscribe
+    fluent_crm/web_email_footer_text
+    fluent_crm/email-design-template-visual_builder
+    fluent_crm/email-design-template-web_preview
+    fluent_crm/parse_extended_crm_text
+    fluent_crm/email-design-template-
+    fluent_crm/parse_extended_crm_text
+    fluent_crm/email_view_on_browser_data
+    fluent_crm/email_newsletter_data
+    ```
+### `app/Hooks/Handlers/PrefFormHandler.php`
+    
+    ```bash
+    fluent_crm/pref_labels
+    fluent_crm/pref_form_fields
+    fluent_crm/countries
+    ```
+### `app/Hooks/Handlers/FunnelHandler.php`
+
+    ```bash
+    fluentcrm_funnel_arg_num_
+    fluentcrm_funnel_editor_details_
+    fluent_crm/pref_labels
+    fluent_crm/pref_form_fields
+    fluent_crm/countries
+    ```
+### `app/Hooks/Handlers/PurchaseHistory.php`
+
+    ```bash
+    fluentcrm_commerce_provider
+    fluent_crm/contact_purchase_stat_
+    fluent_crm/woo_purchase_sidebar_html
+    fluent_crm/edd_purchase_sidebar_html
+    ```
+### `app/Hooks/Handlers/RedirectionHandler.php`
+
+    ```bash
+    fluent_crm/will_use_cookie
+    ```
+### `app/Hooks/Handlers/SetupWizard.php`
+
+    ```bash
+    fluentcrm_setup_wizard
+    ```
+### `app/Http/Controllers/CampaignAnalyticsController.php`
+
+    ```bash
+    woocommerce_admin_order_date_format
     ```
