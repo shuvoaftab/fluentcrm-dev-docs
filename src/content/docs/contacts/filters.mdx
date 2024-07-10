@@ -5,15 +5,21 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
 
 <ol>
 <li>
-    ## Contact Statuses
+    ## Subscriber Statuses
 
     ```bash
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
     Line:     482
     Version:  2.9.1
+    function fluentcrm_subscriber_statuses($isOptions = false)
     ```
 
     ```php
+    /**
+     * Subscriber Statuses
+     *
+     * @param: array $statuses array of subscriber statuses
+     */
     apply_filters('fluent_crm/contact_statuses', [
             'subscribed',
             'pending',
@@ -24,15 +30,21 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
     ```
 </li>
 <li>
-    ## Contact Editable Statuses 
+    ## Contact Editable Statuses
 
     ```bash
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
     Line:     535
     Version:  2.9.1
+    function fluentcrm_subscriber_editable_statuses($isOptions = false)
     ```
 
     ```php
+    /**
+     * Contact's Editable Statuses
+     *
+     * @param: array $editableStatuses array of subscriber's editable statuses
+     */
     $editableStatuses = apply_filters('fluent_crm/contact_editable_statuses', $statuses);
     ```
 </li>
@@ -43,9 +55,15 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
     Line:     573
     Version:  2.9.1
+    function fluentcrm_contact_types($isOptions = false)
     ```
 
     ```php
+    /**
+     * Contact Types
+     *
+     * @param: array $contactTypes array of contact types
+     */
     apply_filters('fluent_crm/contact_types', [
         'lead'     => __('Lead', 'fluent-crm'),
         'customer' => __('Customer', 'fluent-crm')
@@ -53,15 +71,21 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
     ```
 </li>
 <li>
-    ## Contact Activity Types 
+    ## Contact Activity Types
 
     ```bash
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
     Line:     608
     Version:  2.9.1
+    function fluentcrm_activity_types()
     ```
 
     ```php
+    /**
+     * Contact Activities
+     *
+     * @param: array $activityTypes array of contact's Activity Types
+     */
     apply_filters('fluent_crm/contact_activity_types', [
         'note'              => __('Note', 'fluent-crm'),
         'call'              => __('Call', 'fluent-crm'),
@@ -79,6 +103,51 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
         'tweet'             => __('Tweet', 'fluent-crm'),
         'facebook_post'     => __('Facebook Post', 'fluent-crm')
     ]);
+    ```
+</li>
+<li>
+    ## Contact's strict Statuses
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     650
+    Version:  2.9.1
+    function fluentcrm_strict_statues()
+    ```
+
+    ```php
+    /**
+     * Contact's strict Statuses
+     *
+     * @return array contact strict statuses
+     */
+    apply_filters('subscriber_strict_statuses', [
+        'unsubscribed',
+        'bounced',
+        'complained'
+    ]);
+    ```
+</li>
+<li>
+    ## Gravatar URL by Email
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     707
+    Version:  2.9.1
+    function fluentcrmGravatar($email, $name = '')
+    ```
+
+    ```php
+    /**
+     * Gravatar URL by Email
+     *
+     * @return string $gravatar url of the gravatar image
+     */
+    apply_filters('fluent_crm/get_avatar',
+        "https://www.gravatar.com/avatar/{$hash}?s=128" . $fallback,
+        $email
+    );
     ```
 </li>
 </ol>

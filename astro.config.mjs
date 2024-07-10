@@ -40,6 +40,10 @@ export default defineConfig({
 					autogenerate: { directory: 'automation' },
 				},
 				{
+					label: 'Miscellaneous',
+					autogenerate: { directory: 'misc' },
+				},
+				{
 					label: 'Glossary',
 					autogenerate: { directory: 'glossary' },
 				},
