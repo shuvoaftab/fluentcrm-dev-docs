@@ -20,7 +20,7 @@ description: A collection of all  Hooks Filter for FluentCRM.
      *
      * @return array array of CSV mimes
      */
-    return apply_filters('fluencrm_csv_mimes', [
+    apply_filters('fluencrm_csv_mimes', [
         'text/csv',
         'text/plain',
         'application/csv',
@@ -32,6 +32,20 @@ description: A collection of all  Hooks Filter for FluentCRM.
         'application/octet-stream',
         'application/txt'
     ]);
+    ```
+</li>
+<li>
+    ## Contact Import CSV Mimes
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     954
+    Version:  2.9.0
+    fluentcrm_menu_url_base()
+    ```
+
+    ```php
+    apply_filters('fluent_crm/menu_url_base', admin_url('admin.php?page=fluentcrm-admin#/'));
     ```
 </li>
 </ol>

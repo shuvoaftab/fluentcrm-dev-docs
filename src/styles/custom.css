@@ -34,3 +34,20 @@
 li::marker {
     font-size: 2rem;
 }
+
+.btn{
+    background-color: var(--sl-color-accent);
+    color: var(--sl-color-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.ast-primary{
+    font-size: 1.5rem;
+}
