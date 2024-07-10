@@ -9,6 +9,10 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/shuvoaftab/fluentcrm-dev-docs',
 			},
+			customCss: [
+				// Relative path to your custom CSS file
+				'./src/styles/custom.css',
+			],
 			sidebar: [
 				{
 					label: 'Get Started',

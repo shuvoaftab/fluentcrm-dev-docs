@@ -1,0 +1,39 @@
+---
+title: Contact Filters
+description: A collection of all  Hooks Filter for FluentCRM Contacts.
+---
+
+<ol>
+<li>
+    <h2> Contact Statuses </h2>
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     482
+    Version:  2.9.1
+    ```
+
+    ```php
+    apply_filters('fluent_crm/contact_statuses', [
+            'subscribed',
+            'pending',
+            'unsubscribed',
+            'bounced',
+            'complained'
+        ]);
+    ```
+</li>
+<li>
+    <h2> Contact Editable Statuses </h2>
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     535
+    Version:  2.9.1
+    ```
+
+    ```php
+    $editableStatuses = apply_filters('fluent_crm/contact_editable_statuses', $statuses);
+    ```
+</li>
+</ol>

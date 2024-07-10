@@ -1,11 +1,10 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Get Started!
+description: Learn about FluentCRM Actions, Filters, and Snippets.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+Learn about FluentCRM Actions, Filters, and Snippets.
 
-## Further reading
+### FluentCRM Docs
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- Read [all about interface and details](https://fluentcrm.com/docs/)
