@@ -5,7 +5,7 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
 
 <ol>
 <li>
-    <h2> Contact Statuses </h2>
+    ## Contact Statuses
 
     ```bash
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
@@ -24,7 +24,7 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
     ```
 </li>
 <li>
-    <h2> Contact Editable Statuses </h2>
+    ## Contact Editable Statuses 
 
     ```bash
     Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
@@ -34,6 +34,51 @@ description: A collection of all  Hooks Filter for FluentCRM Contacts.
 
     ```php
     $editableStatuses = apply_filters('fluent_crm/contact_editable_statuses', $statuses);
+    ```
+</li>
+<li>
+    ## Contact Types
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     573
+    Version:  2.9.1
+    ```
+
+    ```php
+    apply_filters('fluent_crm/contact_types', [
+        'lead'     => __('Lead', 'fluent-crm'),
+        'customer' => __('Customer', 'fluent-crm')
+    ]);
+    ```
+</li>
+<li>
+    ## Contact Activity Types 
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     608
+    Version:  2.9.1
+    ```
+
+    ```php
+    apply_filters('fluent_crm/contact_activity_types', [
+        'note'              => __('Note', 'fluent-crm'),
+        'call'              => __('Call', 'fluent-crm'),
+        'email'             => __('Email', 'fluent-crm'),
+        'meeting'           => __('Meeting', 'fluent-crm'),
+        'quote_sent'        => __('Quote: Sent', 'fluent-crm'),
+        'quote_accepted'    => __('Quote: Accepted', 'fluent-crm'),
+        'quote_refused'     => __('Quote: Refused', 'fluent-crm'),
+        'invoice_sent'      => __('Invoice: Sent', 'fluent-crm'),
+        'invoice_part_paid' => __('Invoice: Part Paid', 'fluent-crm'),
+        'invoice_paid'      => __('Invoice: Paid', 'fluent-crm'),
+        'invoice_refunded'  => __('Invoice: Refunded', 'fluent-crm'),
+        'transaction'       => __('Transaction', 'fluent-crm'),
+        'feedback'          => __('Feedback', 'fluent-crm'),
+        'tweet'             => __('Tweet', 'fluent-crm'),
+        'facebook_post'     => __('Facebook Post', 'fluent-crm')
+    ]);
     ```
 </li>
 </ol>

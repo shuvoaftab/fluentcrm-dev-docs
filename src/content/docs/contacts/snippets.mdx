@@ -1,0 +1,49 @@
+---
+title: Contact Snippets
+description: A collection of all Snippets for FluentCRM Contacts.
+---
+
+
+<ol>
+<li> 
+    ## Add New Contact Statuses [APPEND]
+
+    ```php
+    /**
+     * @author Ibrahim Sharif <contact@ibrahimsharif.com>
+     * Add new Contact Status in FluentCRM. This will not let you send campaigns or emails to any contacts for these statuses.
+     */
+
+    function newContactStatus($allStatus){
+        
+        $allStatus['test'] = __('Test', 'fluent-crm');
+        $allStatus['failed'] = __('Failed', 'fluent-crm');
+        
+        return $allStatus;
+    }
+
+    add_filter('fluent_crm/contact_statuses', 'newContactStatus');
+    ```
+</li>
+<li> 
+    ## Add New Contact Statuses [REPLACE]
+
+    ```php
+    /**
+     * @author Ibrahim Sharif <contact@ibrahimsharif.com>
+     * Add new Contact Status in FluentCRM. This will not let you send campaigns or emails to any contacts for these statuses.
+     */
+
+    function newContactStatus($allStatus){
+        
+        $allStatus[] = '';
+        $allStatus['test'] = __('Test', 'fluent-crm');
+        $allStatus['failed'] = __('Failed', 'fluent-crm');
+        
+        return $allStatus;
+    }
+
+    add_filter('fluent_crm/contact_statuses', 'newContactStatus');
+    ```
+</li>
+</ol>
