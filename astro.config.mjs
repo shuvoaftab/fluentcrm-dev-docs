@@ -32,6 +32,10 @@ export default defineConfig({
 					autogenerate: { directory: 'contacts' },
 				},
 				{
+					label: 'Company',
+					autogenerate: { directory: 'company' },
+				},
+				{
 					label: 'Emails',
 					autogenerate: { directory: 'emails' },
 				},

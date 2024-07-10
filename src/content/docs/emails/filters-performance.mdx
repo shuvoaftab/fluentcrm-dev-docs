@@ -1,0 +1,47 @@
+---
+title: Performance Filters
+description: A collection of all  Hooks Filter for FluentCRM Contacts.
+---
+
+<ol>
+<li>
+    ## Enable or Disable Click Tracking for Emails
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     763
+    Version:  2.9.0
+    function fluentcrmTrackClicking()
+    ```
+
+    ```php
+    /**
+     * Enable or Disable Click Tracking for Emails
+     *
+     * @param bool $trackClicking if click tracking is enabled or disabled
+     * @return bool
+     */
+    apply_filters('fluent_crm/track_click', true);
+    ```
+</li>
+<li>
+    ## Enable or Disable IP Address Tracking for Emails
+
+    ```bash
+    Location: wp-content/plugins/fluent-crm/app/Functions/helpers.php
+    Line:     787
+    Version:  2.9.0
+    function fluentcrmTrackClicking()
+    ```
+
+    ```php
+    /**
+     * Enable or Disable IP Address Tracking for Emails
+     *
+     * @param bool $trackIp return true if ip address tracking is enabled or false if disabled
+     * @return bool
+     */
+    apply_filters('fluent_crm/will_track_user_ip', true);
+    ```
+</li>
+</ol>
