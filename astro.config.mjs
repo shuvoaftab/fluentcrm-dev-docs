@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'http://fluentcrm.top',
 	integrations: [
 		starlight({
 			title: 'FluentCRM Docs',
