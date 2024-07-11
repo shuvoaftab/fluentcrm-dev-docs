@@ -1,0 +1,220 @@
+---
+title: All Actions
+description: Glossary of All Action Hooks for FluentCRM.
+---
+
+## Pro Version (v2.9.1 - July, 2024)
+
+### `01` - Fluent Campaign Load
+
+<h5>`fluentcampaign-pro.php`</h5>
+
+    ```bash
+    fluentcampaign_loaded
+    ```
+
+### `01` - Email Schedule Handler
+
+<h5>`app\Hooks\Handlers\EmailScheduleHandler.php`</h5>
+
+    ```bash
+    fluentcrm_email_sequence_completed
+    ```
+
+### `01` - Integration Handler
+
+<h5>`app\Hooks\Handlers\IntegrationHandler.php`</h5>
+
+    ```bash
+    fluentcrm_contact_birthday
+    ```
+
+### `02` - Recurring Campaign Handler
+
+<h5>`app\Hooks\Handlers\RecurringCampaignHandler.php`</h5>
+
+    ```bash
+    fluent_crm/recurring_mail_created
+    fluent_crm/recurring_mail_created_as_draft
+    ```
+
+### `01` - Smart Link Handler
+
+<h5>`app\Hooks\Handlers\SmartLinkHandler.php`</h5>
+
+    ```bash
+    fluent_crm/smart_link_clicked_by_contact
+    ```
+
+### `01` - Campaigns Pro Controller
+
+<h5>`app\Http\Controllers\CampaignsProController.php`</h5>
+
+    ```bash
+    fluentcrm_process_contact_jobs
+    ```
+
+### `01` - Recurring Campaign Controller
+
+<h5>`app\Http\Controllers\RecurringCampaignController.php`</h5>
+
+    ```bash
+    fluent_crm/campaign_deleted
+    ```
+
+### `01` - Sequence Controller
+
+<h5>`app\Http\Controllers\SequenceController.php`</h5>
+
+    ```bash
+    fluentcrm_sequence_deleted
+    ```
+
+### `01` - Sequence Mail Controller
+
+<h5>`app\Http\Controllers\SequenceMailController.php`</h5>
+
+    ```bash
+    fluentcrm_sequence_email_deleted
+    ```
+
+### `01` - Sequence
+
+<h5>`app\Models\Sequence.php`</h5>
+
+    ```bash
+    fluentcrm_email_sequence_completed
+    ```
+
+### `01` - Send Campaign Email Action
+
+<h5>`app\Services\Funnel\Actions\SendCampaignEmailAction.php`</h5>
+
+    ```bash
+    fluentcrm_process_contact_jobs
+    ```
+
+### `02` - Update Contact Property Action
+
+<h5>`app\Services\Funnel\Actions\UpdateContactPropertyAction.php`</h5>
+
+    ```bash
+    fluentcrm_contact_updated
+    fluent_crm/contact_updated
+    ```
+
+### `01` - Funnel Condition Helper
+
+<h5>`app\Services\Funnel\Conditions\FunnelConditionHelper.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_event_tracking
+    ```
+
+### `01` - Tracking Event Recorded Trigger
+
+<h5>`app\Services\Funnel\Triggers\TrackingEventRecordedTrigger.php`</h5>
+
+    ```bash
+    fluent_crm/event_tracking_automation_triggered_' . $funnel->id
+    ```
+
+### `01` - PM Pro Integrations
+
+<h5>`app\Services\Integrations\Integrations.php`</h5>
+
+    ```bash
+    fcrm/pmpro_after_change_membership_level
+    ```
+
+### `01` - Affiliate WPAff Active Trigger
+
+<h5>`app\Services\Integrations\AffiliateWP\AffiliateWPAffActiveTrigger.php`</h5>
+
+    ```bash
+    fluentcrm_funnel_start_affwp_set_affiliate_status
+    ```
+
+### `01` - Edd Automation Conditions
+
+<h5>`app\Services\Integrations\Edd\AutomationConditions.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_edd
+    ```
+
+### `01` - LearnDash Automation Conditions
+
+<h5>`app\Services\Integrations\LearnDash\AutomationConditions.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_learndash
+    ```
+
+### `02` - LearnDash Init
+
+<h5>`app\Services\Integrations\LearnDash\LdInit.php`</h5>
+
+    ```bash
+    simulated_learndash_update_course_removed
+    simulated_learndash_update_course_added
+    ```
+
+### `01` - LifterLms Automation Conditions
+
+<h5>`app\Services\Integrations\LifterLms\AutomationConditions.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_lifterlms
+    ```
+
+### `02` - SureCart Init
+
+<h5>`app\Services\Integrations\SureCart\SureCartInit.php`</h5>
+
+    ```bash
+    fluent_surecart_purchase_created_wrap
+    fluent_surecart_purchase_refund_wrap
+    ```
+
+### `01` - WooCommerce Automation Conditions
+
+<h5>`app\Services\Integrations\WooCommerce\AutomationConditions.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_woo
+    ```
+
+### `01` - WooCommerce Init
+
+<h5>`app\Services\Integrations\WooCommerce\WooInit.php`</h5>
+
+    ```bash
+    fluent_crm/before_woo_checkout_check
+    ```
+
+### `01` - WooCommerce Product Admin
+
+<h5>`app\Services\Integrations\WooCommerce\WooProductAdmin.php`</h5>
+
+    ```bash
+    fluent_crm/woo_subscription_expired_simulated
+    ```
+
+### `02` - All Newsletters
+
+<h5>`app\Views\all_newsletters.php`</h5>
+
+    ```bash
+    fluent_crm/before_newsletter_archive
+    fluent_crm/after_newsletter_archive
+    ```
+
+### `02` - Single Newsletter
+
+<h5>`app\Views\single_newsletter.php`</h5>
+
+    ```bash
+    fluent_crm/before_newsletter_single
+    fluent_crm/after_newsletter_single
+    ```
