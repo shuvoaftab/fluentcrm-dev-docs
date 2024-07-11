@@ -54,3 +54,6 @@ li::marker {
 .sl-markdown-content :is(h3) code {
     font-size: 20px;
 }
+.sl-markdown-content h3:not(:where(.not-content *)) {
+    font-size: 1.5rem !important;
+}
