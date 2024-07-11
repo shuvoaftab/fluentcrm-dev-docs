@@ -273,7 +273,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/subscriber_contact_type_to_' . $newType
     ```
 
-### `06` - TagsController
+### `12` - TagsController
 
 <h5>`app/Http/Controllers/TagsController.php`</h5>
 
@@ -282,11 +282,17 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/tag_created
     fluentcrm_tag_updated
     fluent_crm/tag_updated
+    fluentcrm_tag_created
+    fluent_crm/tag_created
+    fluentcrm_tag_updated
+    fluent_crm/tag_updated
+    fluentcrm_tag_deleted
+    fluent_crm/tag_deleted
     fluentcrm_tag_deleted
     fluent_crm/tag_deleted
     ```
 
-### `03` - Template Controller
+### `03` - TemplateController
 
 <h5>`app/Http/Controllers/TemplateController.php`</h5>
 
@@ -296,7 +302,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/email_template_updated
     ```
 
-### `11` - Subscriber
+### `15` - Subscriber
 
 <h5>`app/Models/Subscriber.php`</h5>
 
@@ -305,24 +311,28 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/contact_custom_data_updated
     fluentcrm_contact_created
     fluent_crm/contact_created
-    fluentcrm_subscriber_status_to_
+    fluentcrm_subscriber_status_to_' . $newStatus
     fluentcrm_contact_updated
     fluent_crm/contact_updated
     fluentcrm_contacts_imported_bulk
     fluentcrm_contacts_updated_bulk
     fluent_crm/contact_email_changed
+    fluentcrm_contact_created
+    fluent_crm/contact_created
+    fluentcrm_contact_updated
+    fluent_crm/contact_updated
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `1` - Contacts Query
+### `01` - ContactsQuery
 
 <h5>`app/Services/ContactsQuery.php`</h5>
 
     ```bash
-    fluentcrm_contacts_filter_
+    [Pointer]  => fluentcrm_contacts_filter_' . $providerName
     ```
 
-### `2` - Helper
+### `02` - Helper
 
 <h5>`app/Services/Helper.php`</h5>
 
@@ -331,7 +341,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_after_subscribers_deleted
     ```
 
-### `2` - Sanitize
+### `02` - Sanitize
 
 <h5>`app/Services/Sanitize.php`</h5>
 
@@ -340,7 +350,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/list_created
     ```
 
-### `1` - Active Campaign Migrator
+### `01` - ActiveCampaignMigrator
 
 <h5>`app/Services/CrmMigrator/ActiveCampaignMigrator.php`</h5>
 
@@ -348,7 +358,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `4` - Base Migrator
+### `04` - BaseMigrator
 
 <h5>`app/Services/CrmMigrator/BaseMigrator.php`</h5>
 
@@ -359,7 +369,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/list_created
     ```
 
-### `1` - Convert Kit Migrator
+### `01` - ConvertKitMigrator
 
 <h5>`app/Services/CrmMigrator/ConvertKitMigrator.php`</h5>
 
@@ -367,7 +377,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `1` - Drip Migrator
+### `01` - DripMigrator
 
 <h5>`app/Services/CrmMigrator/DripMigrator.php`</h5>
 
@@ -375,7 +385,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `1` - MailChimp Migrator
+### `01` - MailChimpMigrator
 
 <h5>`app/Services/CrmMigrator/MailChimpMigrator.php`</h5>
 
@@ -383,7 +393,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `1` - Mailer Lite Migrator
+### `01` - MailerLiteMigrator
 
 <h5>`app/Services/CrmMigrator/MailerLiteMigrator.php`</h5>
 
@@ -391,7 +401,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_subscriber_status_to_subscribed
     ```
 
-### `4` - FluentForm Bootstrap
+### `05` - FluentFormBootstrap
 
 <h5>`app/Services/ExternalIntegrations/FluentForm/Bootstrap.php`</h5>
 
