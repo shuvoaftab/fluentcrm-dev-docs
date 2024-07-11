@@ -51,10 +51,6 @@ export default defineConfig({
           label: "Glossary",
           autogenerate: { directory: "glossary" },
         },
-        {
-          label: "Unsubscribe",
-          autogenerate: { directory: "unsubscribe-page" },
-        },
       ],
     }),
   ],
