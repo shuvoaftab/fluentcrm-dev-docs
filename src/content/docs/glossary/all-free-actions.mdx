@@ -5,18 +5,18 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ## Free Version (v2.9.0 - July, 2024)
 
-### `2` - Companies
+### `02` - Companies
 
-<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Companies.php`</h5>
+<h5>`app/Api/Classes/Companies.php`</h5>
 
     ```bash
     fluent_crm/company_updated
     fluent_crm/company_created
     ```
 
-### `4` - Lists
+### `04` - Lists
 
-<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Lists.php`</h5>
+<h5>`app/Api/Classes/Lists.php`</h5>
 
     ```bash
     fluentcrm_list_created
@@ -25,9 +25,9 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/list_updated
     ```
 
-### `4` - Tags
+### `04` - Tags
 
-<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Tags.php`</h5>
+<h5>`app/Api/Classes/Tags.php`</h5>
 
     ```bash
     fluentcrm_tag_created
@@ -36,17 +36,18 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/tag_updated
     ```
 
-### `1` - Tracker
+### `02` - Tracker
 
-<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Tracker.php`</h5>
+<h5>`app/Api/Classes/Tracker.php`</h5>
 
     ```bash
     fluent_crm/event_tracked
+    fluent_crm/event_tracked
     ```
 
-### `6` - Helpers
+### `06` - Helpers
 
-<h5>`wp-content\plugins\fluent-crm\app\Functions\helpers.php`</h5>
+<h5>`app/Functions/helpers.php`</h5>
 
     ```bash
     fluentcrm_contact_added_to_tags
@@ -57,18 +58,18 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contact_removed_from_companies
     ```
 
-### `2` - Actions
+### `02` - Actions
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\actions.php`</h5>
+<h5>`app/Hooks/actions.php`</h5>
 
     ```bash
     fluentcrm_scheduled_minute_tasks
     fluentcrm_scheduled_hourly_tasks
     ```
 
-### `3` - Admin Menu
+### `03` - AdminMenu
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\AdminMenu.php`</h5>
+<h5>`app/Hooks/Handlers/AdminMenu.php`</h5>
 
     ```bash
     fluent_crm/after_core_menu_items
@@ -76,22 +77,22 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/global_appjs_loaded
     ```
 
-### `2` - Auto Subscribe Handler
+### `02` - Auto Subscribe Handler
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\AutoSubscribeHandler.php`</h5>
+<h5>`app/Hooks/Handlers/AutoSubscribeHandler.php`</h5>
 
     ```bash
     fluentcrm_woo_review_comment_post
     fluent_crm/contact_updated
     ```
 
-### `18` - External Pages
+### `19` - ExternalPages
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\ExternalPages.php`</h5>
+<h5>`app/Hooks/Handlers/ExternalPages.php`</h5>
 
     ```bash
     litespeed_control_set_nocache
-    fluentcrm_subscriber_status_to_
+    fluentcrm_subscriber_status_to_' . $data['status']
     fluentcrm_subscriber_status_to_bounced
     fluentcrm_subscriber_status_to_unsubscribed
     fluent_crm/doing_unsubscribe_request_form
@@ -107,12 +108,13 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/subscriber_confirmed_via_double_optin
     fluencrm_benchmark_link_clicked
     fluentcrm_smartlink_clicked
-    fluentcrm_webhook_to_
+    $callbackName
+    fluentcrm_webhook_to_' . $handler
     ```
 
-### `3` - Funnel Handler
+### `03` - FunnelHandler
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\FunnelHandler.php`</h5>
+<h5>`app/Hooks/Handlers/FunnelHandler.php`</h5>
 
     ```bash
     fluentcrm_funnel_start_{$triggerName}
@@ -120,9 +122,9 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/update_campaign_compose
     ```
 
-### `4` - Pref Form Handler
+### `04` - PrefFormHandler
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\PrefFormHandler.php`</h5>
+<h5>`app/Hooks/Handlers/PrefFormHandler.php`</h5>
 
     ```bash
     fluent_crm/rendering_pref_form_shortcode
@@ -131,9 +133,9 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/contact_updated
     ```
 
-### `7` - Redirection Handler
+### `07` - Redirection Handler
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\RedirectionHandler.php`</h5>
+<h5>`app/Hooks/Handlers/RedirectionHandler.php`</h5>
 
     ```bash
     fluentcrm_email_url_click
@@ -145,29 +147,30 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluencrm_benchmark_link_clicked
     ```
 
-### `5` - Scheduler
+### `06` - Scheduler
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\Scheduler.php`</h5>
+<h5>`app/Hooks/Handlers/Scheduler.php`</h5>
 
     ```bash
     fluent_crm_process_automation
     fluentcrm_process_scheduled_tasks_init
+    fluent_crm_process_automation
     fluent_crm/campaign_archived
     fluent_crm_process_automation
     fluentcrm_scheduled_hourly_tasks
     ```
 
-### `1` - URL Metrics
+### `01` - URLMetrics
 
-<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\UrlMetrics.php`</h5>
+<h5>`app/Hooks/Handlers/UrlMetrics.php`</h5>
 
     ```bash
     fluentcrm_email_link_click_inserted
     ```
 
-### `12` - Campaign Controller
+### `16` - CampaignController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\CampaignController.php`</h5>
+<h5>`app/Http/Controllers/CampaignController.php`</h5>
 
     ```bash
     fluent_crm/campaign_created
@@ -176,50 +179,56 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/campaign_data_updated
     fluent_crm/campaign_recipients_query_updated
     fluentcrm_campaign_status_active
+    fluentcrm_campaign_status_active
     fluent_crm/campaign_scheduled
     fluent_crm/campaign_set_send_now
     fluent_crm/campaign_processing_start
+    fluentcrm_campaign_status_active
     fluent_crm/campaign_deleted
+    fluent_crm/campaign_deleted
+    fluentcrm_campaign_status_active
     fluent_crm/campaign_archived
     fluent_crm/campaign_duplicated
     ```
 
-### `9` - Company Controller
+### `11` - CompanyController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\CompanyController.php`</h5>
+<h5>`app/Http/Controllers/CompanyController.php`</h5>
 
     ```bash
-    fluent_crm/company_
+    fluent_crm/company_' . $column . '_to_' . $value
     fluent_crm/before_company_delete
     fluent_crm/company_deleted
-    fluent_crm/company_status_to_
-    fluent_crm/company_type_to_
-    fluent_crm/company_category_to_
+    fluent_crm/before_company_delete
+    fluent_crm/company_deleted
+    fluent_crm/company_status_to_' . $newStatus
+    fluent_crm/company_type_to_' . $newType
+    fluent_crm/company_category_to_' . $newCategory
     fluent_crm/company_note_added
     fluent_crm/company_note_updated
     fluent_crm/company_note_deleted
     ```
 
-### `2` - Forms Controller
+### `02` - FormsController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\FormsController.php`</h5>
+<h5>`app/Http/Controllers/FormsController.php`</h5>
 
     ```bash
     fluentform/inserted_new_form
     fluentcrm_created_new_fluentform
     ```
 
-### `1` - Funnel Controller
+### `01` - FunnelController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\FunnelController.php`</h5>
+<h5>`app/Http/Controllers/FunnelController.php`</h5>
 
     ```bash
     fluentcrm_funnel_sequence_deleting_
     ```
 
-### `10` - Lists Controller
+### `12` - ListsController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\ListsController.php`</h5>
+<h5>`app/Http/Controllers/ListsController.php`</h5>
 
     ```bash
     fluentcrm_list_created
@@ -232,14 +241,24 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/list_updated
     fluent_crm/list_deleted
     fluentcrm_list_deleted
+    fluent_crm/list_deleted
+    fluentcrm_list_deleted
     ```
 
-### `13` - Subscriber Controller
+### `12` - SettingsController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\SubscriberController.php`</h5>
+<h5>`app/Http/Controllers/SettingsController.php`</h5>
 
     ```bash
-    fluentcrm_subscriber_' . $column . '_to_
+    $hookName
+    ```
+
+### `13` - SubscriberController
+
+<h5>`app/Http/Controllers/SubscriberController.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_' . $column . '_to_' . $value
     fluent_crm/subscriber_avatar_update
     fluentcrm_contact_created
     fluent_crm/contact_created
@@ -250,13 +269,13 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/note_updated
     fluent_crm/note_delete
     fluentcrm_process_contact_jobs
-    fluentcrm_subscriber_status_to_
-    fluent_crm/subscriber_contact_type_to_
+    fluentcrm_subscriber_status_to_' . $newStatus
+    fluent_crm/subscriber_contact_type_to_' . $newType
     ```
 
-### `6` - Tags Controller
+### `06` - TagsController
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\TagsController.php`</h5>
+<h5>`app/Http/Controllers/TagsController.php`</h5>
 
     ```bash
     fluentcrm_tag_created
@@ -267,9 +286,9 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/tag_deleted
     ```
 
-### `3` - Template Controller
+### `03` - Template Controller
 
-<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\TemplateController.php`</h5>
+<h5>`app/Http/Controllers/TemplateController.php`</h5>
 
     ```bash
     fluent_crm/email_template_created
@@ -279,7 +298,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `11` - Subscriber
 
-<h5>`wp-content\plugins\fluent-crm\app\Models\Subscriber.php`</h5>
+<h5>`app/Models/Subscriber.php`</h5>
 
     ```bash
     fluentcrm_contact_custom_data_updated
@@ -297,7 +316,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Contacts Query
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\ContactsQuery.php`</h5>
+<h5>`app/Services/ContactsQuery.php`</h5>
 
     ```bash
     fluentcrm_contacts_filter_
@@ -305,7 +324,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Helper
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Helper.php`</h5>
+<h5>`app/Services/Helper.php`</h5>
 
     ```bash
     fluentcrm_before_subscribers_deleted
@@ -314,7 +333,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Sanitize
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Sanitize.php`</h5>
+<h5>`app/Services/Sanitize.php`</h5>
 
     ```bash
     fluent_crm/tag_created
@@ -323,7 +342,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Active Campaign Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\ActiveCampaignMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/ActiveCampaignMigrator.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -331,7 +350,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `4` - Base Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\BaseMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/BaseMigrator.php`</h5>
 
     ```bash
     fluentcrm_tag_created
@@ -342,7 +361,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Convert Kit Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\ConvertKitMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/ConvertKitMigrator.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -350,7 +369,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Drip Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\DripMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/DripMigrator.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -358,7 +377,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - MailChimp Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\MailChimpMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/MailChimpMigrator.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -366,7 +385,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Mailer Lite Migrator
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\MailerLiteMigrator.php`</h5>
+<h5>`app/Services/CrmMigrator/MailerLiteMigrator.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -374,7 +393,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `4` - FluentForm Bootstrap
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\ExternalIntegrations\FluentForm\Bootstrap.php`</h5>
+<h5>`app/Services/ExternalIntegrations/FluentForm/Bootstrap.php`</h5>
 
     ```bash
     fluentcrm_subscriber_status_to_subscribed
@@ -385,7 +404,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Funnel Helper
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\FunnelHelper.php`</h5>
+<h5>`app/Services/Funnel/FunnelHelper.php`</h5>
 
     ```bash
     fluentcrm_funnel_sequence_deleting_
@@ -394,7 +413,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Funnel Processor
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\FunnelProcessor.php`</h5>
+<h5>`app/Services/Funnel/FunnelProcessor.php`</h5>
 
     ```bash
     fluent_crm/automation_funnel_start
@@ -404,7 +423,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Send Email Action
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\Actions\SendEmailAction.php`</h5>
+<h5>`app/Services/Funnel/Actions/SendEmailAction.php`</h5>
 
     ```bash
     fluentcrm_process_contact_jobs
@@ -412,7 +431,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Mailer Base Handler
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Libs\Mailer\BaseHandler.php`</h5>
+<h5>`app/Services/Libs/Mailer/BaseHandler.php`</h5>
 
     ```bash
     fluent_crm/sending_emails_starting
@@ -421,7 +440,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Mailer Handler
 
-<h5>`wp-content\plugins\fluent-crm\app\Services\Libs\Mailer\Handler.php`</h5>
+<h5>`app/Services/Libs/Mailer/Handler.php`</h5>
 
     ```bash
     fluentcrm_scheduled_maybe_regular_tasks
@@ -430,7 +449,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Admin Menu Page
 
-<h5>`wp-content\plugins\fluent-crm\app\views\admin\menu_page.php`</h5>
+<h5>`app/views/admin/menu_page.php`</h5>
 
     ```bash
     fluent_crm/before_admin_app_wrap
@@ -439,7 +458,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Admin Setup Wizard
 
-<h5>`wp-content\plugins\fluent-crm\app\views\admin\setup_wizard.php`</h5>
+<h5>`app/views/admin/setup_wizard.php`</h5>
 
     ```bash
     admin_print_styles
@@ -449,7 +468,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Classic Template
 
-<h5>`wp-content\plugins\fluent-crm\app\views\emails\classic\Template.php`</h5>
+<h5>`app/views/emails/classic/Template.php`</h5>
 
     ```bash
     fluent_crm/email_header
@@ -457,7 +476,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Plain Template
 
-<h5>`wp-content\plugins\fluent-crm\app\views\emails\plain\Template.php`</h5>
+<h5>`app/views/emails/plain/Template.php`</h5>
 
     ```bash
     fluent_crm/email_header
@@ -465,7 +484,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Raw Classic Template
 
-<h5>`wp-content\plugins\fluent-crm\app\views\emails\raw_classic\Template.php`</h5>
+<h5>`app/views/emails/raw_classic/Template.php`</h5>
 
     ```bash
     fluent_crm/email_header
@@ -473,7 +492,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - Simple Template
 
-<h5>`wp-content\plugins\fluent-crm\app\views\emails\simple\Template.php`</h5>
+<h5>`app/views/emails/simple/Template.php`</h5>
 
     ```bash
     fluent_crm/email_header
@@ -481,7 +500,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Confirmation
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\confirmation.php`</h5>
+<h5>`app/views/external/confirmation.php`</h5>
 
     ```bash
     fluent_crm/confirmation_head
@@ -490,7 +509,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Manage Subscription Request Form
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\manage_subscription_request_form.php`</h5>
+<h5>`app/views/external/manage_subscription_request_form.php`</h5>
 
     ```bash
     fluent_crm/manage_sub_request_head
@@ -500,7 +519,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - Manage Subscription
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\manage_subscription.php`</h5>
+<h5>`app/views/external/manage_subscription.php`</h5>
 
     ```bash
     fluent_crm/manage_subscription_head
@@ -509,7 +528,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Pref Form
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\pref_form.php`</h5>
+<h5>`app/views/external/pref_form.php`</h5>
 
     ```bash
     fluent_crm/before_pref_form
@@ -519,7 +538,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Unsubscribe Request Form
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\unsubscribe_request_form.php`</h5>
+<h5>`app/views/external/unsubscribe_request_form.php`</h5>
 
     ```bash
     fluent_crm/unsubscribe_request_head
@@ -529,7 +548,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `6` - Unsubscribe
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\unsubscribe.php`</h5>
+<h5>`app/views/external/unsubscribe.php`</h5>
 
     ```bash
     fluent_crm/unsubscribe_head
@@ -542,7 +561,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `5` - View on Browser
 
-<h5>`wp-content\plugins\fluent-crm\app\views\external\view_on_browser.php`</h5>
+<h5>`app/views/external/view_on_browser.php`</h5>
 
     ```bash
     fluent_crm/view_on_browser_head
@@ -554,7 +573,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - Boot App
 
-<h5>`wp-content\plugins\fluent-crm\boot\app.php`</h5>
+<h5>`boot/app.php`</h5>
 
     ```bash
     fluentcrm_loaded
@@ -564,7 +583,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\action-scheduler.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/action-scheduler.php`</h5>
 
     ```bash
     action_scheduler_pre_theme_init
@@ -572,7 +591,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler Admin View
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_AdminView.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php`</h5>
 
     ```bash
     action_scheduler_pastdue_actions_extra_notices
@@ -580,7 +599,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler Async Request
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_AsyncRequest_QueueRunner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/ActionScheduler_AsyncRequest_QueueRunner.php`</h5>
 
     ```bash
     action_scheduler_run_queue
@@ -588,7 +607,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler Fatal Error Monitor
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_FatalErrorMonitor.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/ActionScheduler_FatalErrorMonitor.php`</h5>
 
     ```bash
     action_scheduler_unexpected_shutdown
@@ -596,7 +615,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `3` - WooCommerce Action Scheduler Queue Cleaner
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueCleaner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/ActionScheduler_QueueCleaner.php`</h5>
 
     ```bash
     action_scheduler_failed_{$context}_action_deletion
@@ -606,7 +625,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - WooCommerce Action Scheduler Queue Runner
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueRunner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/ActionScheduler_QueueRunner.php`</h5>
 
     ```bash
     action_scheduler_before_process_queue
@@ -615,7 +634,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `7` - WooCommerce Action Scheduler Abstract Queue Runner
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_QueueRunner.php`</h5>
 
     ```bash
     action_scheduler_before_execute
@@ -629,7 +648,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - WooCommerce Action Scheduler Abstract Schema
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Abstract_Schema.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_Schema.php`</h5>
 
     ```bash
     action_scheduler_before_schema_update
@@ -638,7 +657,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler Store
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Store.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php`</h5>
 
     ```bash
     action_scheduler_bulk_cancel_actions
@@ -646,7 +665,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - WooCommerce Action Scheduler
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler.php`</h5>
 
     ```bash
     action_scheduler_pre_init
@@ -655,7 +674,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `6` - WooCommerce Action Scheduler DB Store
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php`</h5>
 
     ```bash
     action_scheduler_stored_action
@@ -668,7 +687,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `5` - WooCommerce Action Scheduler WP Post Store
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_wpPostStore.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php`</h5>
 
     ```bash
     action_scheduler_stored_action
@@ -680,7 +699,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `4` - WooCommerce Action Migrator
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\ActionMigrator.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/migration/ActionMigrator.php`</h5>
 
     ```bash
     action_scheduler/no_action_to_migrate
@@ -691,7 +710,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Dry Run Action Migrator
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\DryRun_ActionMigrator.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/migration/DryRun_ActionMigrator.php`</h5>
 
     ```bash
     action_scheduler/migrate_action_dry_run
@@ -699,7 +718,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - WooCommerce Runner
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\Runner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/migration/Runner.php`</h5>
 
     ```bash
     action_scheduler/migration_batch_starting
@@ -708,7 +727,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Migration Scheduler
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\Scheduler.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/migration/Scheduler.php`</h5>
 
     ```bash
     action_scheduler/migration_complete
@@ -716,7 +735,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `2` - WooCommerce Action Scheduler WP CLI QueueRunner
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\WP_CLI\ActionScheduler_WPCLI_QueueRunner.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php`</h5>
 
     ```bash
     action_scheduler_before_process_queue
@@ -725,7 +744,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WooCommerce Action Scheduler ProgressBar
 
-<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\WP_CLI\ProgressBar.php`</h5>
+<h5>`vendor/woocommerce/action-scheduler/classes/WP_CLI/ProgressBar.php`</h5>
 
     ```bash
     action_scheduler/progress_tick
@@ -733,7 +752,7 @@ description: Glossary of All Action Hooks for FluentCRM.
 
 ### `1` - WPFluent Response
 
-<h5>`wp-content\plugins\fluent-crm\vendor\wpfluent\framework\src\WPFluent\Response\Response.php`</h5>
+<h5>`vendor/wpfluent/framework/src/WPFluent/Response/Response.php`</h5>
 
     ```bash
     litespeed_control_set_nocache
