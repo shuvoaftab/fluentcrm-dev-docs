@@ -1,11 +1,11 @@
 ---
-title: All Actions
+title: All Pro Actions
 description: Glossary of All Action Hooks for FluentCRM.
 ---
 
 ## Pro Version (v2.9.1 - July, 2024)
 
-### `01` - Fluent Campaign Load
+#### `01` - FluentCampaignLoad
 
 <h5>`fluentcampaign-pro.php`</h5>
 
@@ -13,7 +13,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcampaign_loaded
     ```
 
-### `01` - Email Schedule Handler
+#### `01` - EmailScheduleHandler
 
 <h5>`app\Hooks\Handlers\EmailScheduleHandler.php`</h5>
 
@@ -21,7 +21,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_email_sequence_completed
     ```
 
-### `01` - Integration Handler
+#### `01` - IntegrationHandler
 
 <h5>`app\Hooks\Handlers\IntegrationHandler.php`</h5>
 
@@ -29,7 +29,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contact_birthday
     ```
 
-### `02` - Recurring Campaign Handler
+#### `02` - RecurringCampaignHandler
 
 <h5>`app\Hooks\Handlers\RecurringCampaignHandler.php`</h5>
 
@@ -38,7 +38,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/recurring_mail_created_as_draft
     ```
 
-### `01` - Smart Link Handler
+#### `01` - SmartLinkHandler
 
 <h5>`app\Hooks\Handlers\SmartLinkHandler.php`</h5>
 
@@ -46,7 +46,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/smart_link_clicked_by_contact
     ```
 
-### `01` - Campaigns Pro Controller
+#### `01` - CampaignsProController
 
 <h5>`app\Http\Controllers\CampaignsProController.php`</h5>
 
@@ -54,15 +54,16 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_process_contact_jobs
     ```
 
-### `01` - Recurring Campaign Controller
+#### `02` - RecurringCampaignController
 
 <h5>`app\Http\Controllers\RecurringCampaignController.php`</h5>
 
     ```bash
     fluent_crm/campaign_deleted
+    fluent_crm/campaign_deleted
     ```
 
-### `01` - Sequence Controller
+#### `01` - SequenceController
 
 <h5>`app\Http\Controllers\SequenceController.php`</h5>
 
@@ -70,7 +71,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_sequence_deleted
     ```
 
-### `01` - Sequence Mail Controller
+#### `01` - SequenceMailController
 
 <h5>`app\Http\Controllers\SequenceMailController.php`</h5>
 
@@ -78,7 +79,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_sequence_email_deleted
     ```
 
-### `01` - Sequence
+#### `01` - Sequence
 
 <h5>`app\Models\Sequence.php`</h5>
 
@@ -86,7 +87,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_email_sequence_completed
     ```
 
-### `01` - Send Campaign Email Action
+#### `01` - SendCampaignEmailAction
 
 <h5>`app\Services\Funnel\Actions\SendCampaignEmailAction.php`</h5>
 
@@ -94,7 +95,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_process_contact_jobs
     ```
 
-### `02` - Update Contact Property Action
+#### `02` - UpdateContactPropertyAction
 
 <h5>`app\Services\Funnel\Actions\UpdateContactPropertyAction.php`</h5>
 
@@ -103,7 +104,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/contact_updated
     ```
 
-### `01` - Funnel Condition Helper
+#### `01` - FunnelConditionHelper
 
 <h5>`app\Services\Funnel\Conditions\FunnelConditionHelper.php`</h5>
 
@@ -111,7 +112,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contacts_filter_event_tracking
     ```
 
-### `01` - Tracking Event Recorded Trigger
+#### `01` - TrackingEventRecordedTrigger
 
 <h5>`app\Services\Funnel\Triggers\TrackingEventRecordedTrigger.php`</h5>
 
@@ -119,7 +120,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/event_tracking_automation_triggered_' . $funnel->id
     ```
 
-### `01` - PM Pro Integrations
+#### `01` - PMProIntegrations
 
 <h5>`app\Services\Integrations\Integrations.php`</h5>
 
@@ -127,7 +128,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fcrm/pmpro_after_change_membership_level
     ```
 
-### `01` - Affiliate WPAff Active Trigger
+#### `01` - AffiliateWPAffActiveTrigger
 
 <h5>`app\Services\Integrations\AffiliateWP\AffiliateWPAffActiveTrigger.php`</h5>
 
@@ -135,7 +136,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_funnel_start_affwp_set_affiliate_status
     ```
 
-### `01` - Edd Automation Conditions
+#### `01` - EddAutomationConditions
 
 <h5>`app\Services\Integrations\Edd\AutomationConditions.php`</h5>
 
@@ -143,7 +144,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contacts_filter_edd
     ```
 
-### `01` - LearnDash Automation Conditions
+#### `01` - LearnDashAutomationConditions
 
 <h5>`app\Services\Integrations\LearnDash\AutomationConditions.php`</h5>
 
@@ -151,7 +152,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contacts_filter_learndash
     ```
 
-### `02` - LearnDash Init
+#### `02` - LearnDashInit
 
 <h5>`app\Services\Integrations\LearnDash\LdInit.php`</h5>
 
@@ -160,7 +161,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     simulated_learndash_update_course_added
     ```
 
-### `01` - LifterLms Automation Conditions
+#### `01` - LifterLmsAutomationConditions
 
 <h5>`app\Services\Integrations\LifterLms\AutomationConditions.php`</h5>
 
@@ -168,7 +169,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contacts_filter_lifterlms
     ```
 
-### `02` - SureCart Init
+#### `02` - SureCartInit
 
 <h5>`app\Services\Integrations\SureCart\SureCartInit.php`</h5>
 
@@ -177,7 +178,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_surecart_purchase_refund_wrap
     ```
 
-### `01` - WooCommerce Automation Conditions
+#### `01` - WooCommerceAutomationConditions
 
 <h5>`app\Services\Integrations\WooCommerce\AutomationConditions.php`</h5>
 
@@ -185,7 +186,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluentcrm_contacts_filter_woo
     ```
 
-### `01` - WooCommerce Init
+#### `01` - WooCommerceInit
 
 <h5>`app\Services\Integrations\WooCommerce\WooInit.php`</h5>
 
@@ -193,7 +194,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/before_woo_checkout_check
     ```
 
-### `01` - WooCommerce Product Admin
+#### `01` - WooCommerceProductAdmin
 
 <h5>`app\Services\Integrations\WooCommerce\WooProductAdmin.php`</h5>
 
@@ -201,7 +202,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/woo_subscription_expired_simulated
     ```
 
-### `02` - All Newsletters
+#### `02` - AllNewsletters
 
 <h5>`app\Views\all_newsletters.php`</h5>
 
@@ -210,7 +211,7 @@ description: Glossary of All Action Hooks for FluentCRM.
     fluent_crm/after_newsletter_archive
     ```
 
-### `02` - Single Newsletter
+#### `02` - SingleNewsletter
 
 <h5>`app\Views\single_newsletter.php`</h5>
 
