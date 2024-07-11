@@ -2,3 +2,739 @@
 title: All Actions
 description: Glossary of All Action Hooks for FluentCRM.
 ---
+
+## Free Version (v2.9.0 - July, 2024)
+
+### `2` - Companies
+
+<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Companies.php`</h5>
+
+    ```bash
+    fluent_crm/company_updated
+    fluent_crm/company_created
+    ```
+
+### `4` - Lists
+
+<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Lists.php`</h5>
+
+    ```bash
+    fluentcrm_list_created
+    fluent_crm/list_created
+    fluentcrm_list_updated
+    fluent_crm/list_updated
+    ```
+
+### `4` - Tags
+
+<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Tags.php`</h5>
+
+    ```bash
+    fluentcrm_tag_created
+    fluent_crm/tag_created
+    fluentcrm_tag_updated
+    fluent_crm/tag_updated
+    ```
+
+### `1` - Tracker
+
+<h5>`wp-content\plugins\fluent-crm\app\Api\Classes\Tracker.php`</h5>
+
+    ```bash
+    fluent_crm/event_tracked
+    ```
+
+### `6` - Helpers
+
+<h5>`wp-content\plugins\fluent-crm\app\Functions\helpers.php`</h5>
+
+    ```bash
+    fluentcrm_contact_added_to_tags
+    fluentcrm_contact_added_to_companies
+    fluentcrm_contact_added_to_lists
+    fluentcrm_contact_removed_from_tags
+    fluentcrm_contact_removed_from_lists
+    fluentcrm_contact_removed_from_companies
+    ```
+
+### `2` - Actions
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\actions.php`</h5>
+
+    ```bash
+    fluentcrm_scheduled_minute_tasks
+    fluentcrm_scheduled_hourly_tasks
+    ```
+
+### `3` - Admin Menu
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\AdminMenu.php`</h5>
+
+    ```bash
+    fluent_crm/after_core_menu_items
+    fluentcrm_loading_app
+    fluent_crm/global_appjs_loaded
+    ```
+
+### `2` - Auto Subscribe Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\AutoSubscribeHandler.php`</h5>
+
+    ```bash
+    fluentcrm_woo_review_comment_post
+    fluent_crm/contact_updated
+    ```
+
+### `18` - External Pages
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\ExternalPages.php`</h5>
+
+    ```bash
+    litespeed_control_set_nocache
+    fluentcrm_subscriber_status_to_
+    fluentcrm_subscriber_status_to_bounced
+    fluentcrm_subscriber_status_to_unsubscribed
+    fluent_crm/doing_unsubscribe_request_form
+    fluent_crm/doing_unsubscribe_request_form
+    fluent_crm/before_unsubscribe_request_email
+    fluent_crm/before_manage_sub_request_email
+    fluentcrm_subscriber_status_to_unsubscribed
+    fluent_crm/subscriber_unsubscribed_from_web_ui
+    fluent_crm/email_opened
+    fluent_crm/track_activity_by_subscriber
+    fluentcrm_subscriber_status_to_subscribed
+    fluentcrm_process_contact_jobs
+    fluent_crm/subscriber_confirmed_via_double_optin
+    fluencrm_benchmark_link_clicked
+    fluentcrm_smartlink_clicked
+    fluentcrm_webhook_to_
+    ```
+
+### `3` - Funnel Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\FunnelHandler.php`</h5>
+
+    ```bash
+    fluentcrm_funnel_start_{$triggerName}
+    fluentcrm_funnel_benchmark_start_{$triggerName}
+    fluent_crm/update_campaign_compose
+    ```
+
+### `4` - Pref Form Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\PrefFormHandler.php`</h5>
+
+    ```bash
+    fluent_crm/rendering_pref_form_shortcode
+    fluent_crm/pref_form_self_contact_updated
+    fluentcrm_contact_updated
+    fluent_crm/contact_updated
+    ```
+
+### `7` - Redirection Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\RedirectionHandler.php`</h5>
+
+    ```bash
+    fluentcrm_email_url_click
+    fluent_crm/email_opened
+    fluent_crm/email_url_clicked
+    fluent_crm/track_activity_by_subscriber
+    fluent_crm/smart_link_verified
+    fluentcrm_smartlink_clicked_direct
+    fluencrm_benchmark_link_clicked
+    ```
+
+### `5` - Scheduler
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\Scheduler.php`</h5>
+
+    ```bash
+    fluent_crm_process_automation
+    fluentcrm_process_scheduled_tasks_init
+    fluent_crm/campaign_archived
+    fluent_crm_process_automation
+    fluentcrm_scheduled_hourly_tasks
+    ```
+
+### `1` - URL Metrics
+
+<h5>`wp-content\plugins\fluent-crm\app\Hooks\Handlers\UrlMetrics.php`</h5>
+
+    ```bash
+    fluentcrm_email_link_click_inserted
+    ```
+
+### `12` - Campaign Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\CampaignController.php`</h5>
+
+    ```bash
+    fluent_crm/campaign_created
+    fluent_crm/update_campaign_compose
+    fluent_crm/update_campaign_subjects
+    fluent_crm/campaign_data_updated
+    fluent_crm/campaign_recipients_query_updated
+    fluentcrm_campaign_status_active
+    fluent_crm/campaign_scheduled
+    fluent_crm/campaign_set_send_now
+    fluent_crm/campaign_processing_start
+    fluent_crm/campaign_deleted
+    fluent_crm/campaign_archived
+    fluent_crm/campaign_duplicated
+    ```
+
+### `9` - Company Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\CompanyController.php`</h5>
+
+    ```bash
+    fluent_crm/company_
+    fluent_crm/before_company_delete
+    fluent_crm/company_deleted
+    fluent_crm/company_status_to_
+    fluent_crm/company_type_to_
+    fluent_crm/company_category_to_
+    fluent_crm/company_note_added
+    fluent_crm/company_note_updated
+    fluent_crm/company_note_deleted
+    ```
+
+### `2` - Forms Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\FormsController.php`</h5>
+
+    ```bash
+    fluentform/inserted_new_form
+    fluentcrm_created_new_fluentform
+    ```
+
+### `1` - Funnel Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\FunnelController.php`</h5>
+
+    ```bash
+    fluentcrm_funnel_sequence_deleting_
+    ```
+
+### `10` - Lists Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\ListsController.php`</h5>
+
+    ```bash
+    fluentcrm_list_created
+    fluent_crm/list_created
+    fluentcrm_list_updated
+    fluent_crm/list_updated
+    fluentcrm_list_created
+    fluent_crm/list_created
+    fluentcrm_list_updated
+    fluent_crm/list_updated
+    fluent_crm/list_deleted
+    fluentcrm_list_deleted
+    ```
+
+### `13` - Subscriber Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\SubscriberController.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_' . $column . '_to_
+    fluent_crm/subscriber_avatar_update
+    fluentcrm_contact_created
+    fluent_crm/contact_created
+    fluent_crm/contact_email_changed
+    fluentcrm_contact_updated
+    fluent_crm/contact_updated
+    fluent_crm/note_added
+    fluent_crm/note_updated
+    fluent_crm/note_delete
+    fluentcrm_process_contact_jobs
+    fluentcrm_subscriber_status_to_
+    fluent_crm/subscriber_contact_type_to_
+    ```
+
+### `6` - Tags Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\TagsController.php`</h5>
+
+    ```bash
+    fluentcrm_tag_created
+    fluent_crm/tag_created
+    fluentcrm_tag_updated
+    fluent_crm/tag_updated
+    fluentcrm_tag_deleted
+    fluent_crm/tag_deleted
+    ```
+
+### `3` - Template Controller
+
+<h5>`wp-content\plugins\fluent-crm\app\Http\Controllers\TemplateController.php`</h5>
+
+    ```bash
+    fluent_crm/email_template_created
+    fluent_crm/email_template_duplicated
+    fluent_crm/email_template_updated
+    ```
+
+### `11` - Subscriber
+
+<h5>`wp-content\plugins\fluent-crm\app\Models\Subscriber.php`</h5>
+
+    ```bash
+    fluentcrm_contact_custom_data_updated
+    fluent_crm/contact_custom_data_updated
+    fluentcrm_contact_created
+    fluent_crm/contact_created
+    fluentcrm_subscriber_status_to_
+    fluentcrm_contact_updated
+    fluent_crm/contact_updated
+    fluentcrm_contacts_imported_bulk
+    fluentcrm_contacts_updated_bulk
+    fluent_crm/contact_email_changed
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `1` - Contacts Query
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\ContactsQuery.php`</h5>
+
+    ```bash
+    fluentcrm_contacts_filter_
+    ```
+
+### `2` - Helper
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Helper.php`</h5>
+
+    ```bash
+    fluentcrm_before_subscribers_deleted
+    fluentcrm_after_subscribers_deleted
+    ```
+
+### `2` - Sanitize
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Sanitize.php`</h5>
+
+    ```bash
+    fluent_crm/tag_created
+    fluent_crm/list_created
+    ```
+
+### `1` - Active Campaign Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\ActiveCampaignMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `4` - Base Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\BaseMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_tag_created
+    fluent_crm/tag_created
+    fluentcrm_list_created
+    fluent_crm/list_created
+    ```
+
+### `1` - Convert Kit Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\ConvertKitMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `1` - Drip Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\DripMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `1` - MailChimp Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\MailChimpMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `1` - Mailer Lite Migrator
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\CrmMigrator\MailerLiteMigrator.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    ```
+
+### `4` - FluentForm Bootstrap
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\ExternalIntegrations\FluentForm\Bootstrap.php`</h5>
+
+    ```bash
+    fluentcrm_subscriber_status_to_subscribed
+    fluent_crm/contact_added_by_fluentform
+    fluent_crm/contact_updated_by_fluentform
+    ff_log_data
+    ```
+
+### `2` - Funnel Helper
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\FunnelHelper.php`</h5>
+
+    ```bash
+    fluentcrm_funnel_sequence_deleting_
+    fluent_crm/sequence_created_
+    ```
+
+### `3` - Funnel Processor
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\FunnelProcessor.php`</h5>
+
+    ```bash
+    fluent_crm/automation_funnel_start
+    fluentcrm_funnel_sequence_handle_
+    fluent_crm/automation_funnel_completed
+    ```
+
+### `1` - Send Email Action
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Funnel\Actions\SendEmailAction.php`</h5>
+
+    ```bash
+    fluentcrm_process_contact_jobs
+    ```
+
+### `2` - Mailer Base Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Libs\Mailer\BaseHandler.php`</h5>
+
+    ```bash
+    fluent_crm/sending_emails_starting
+    fluentcrm_sending_emails_done
+    ```
+
+### `2` - Mailer Handler
+
+<h5>`wp-content\plugins\fluent-crm\app\Services\Libs\Mailer\Handler.php`</h5>
+
+    ```bash
+    fluentcrm_scheduled_maybe_regular_tasks
+    fluent_crm_process_automation
+    ```
+
+### `2` - Admin Menu Page
+
+<h5>`wp-content\plugins\fluent-crm\app\views\admin\menu_page.php`</h5>
+
+    ```bash
+    fluent_crm/before_admin_app_wrap
+    fluent_crm/admin_app
+    ```
+
+### `3` - Admin Setup Wizard
+
+<h5>`wp-content\plugins\fluent-crm\app\views\admin\setup_wizard.php`</h5>
+
+    ```bash
+    admin_print_styles
+    admin_head
+    admin_footer
+    ```
+
+### `1` - Classic Template
+
+<h5>`wp-content\plugins\fluent-crm\app\views\emails\classic\Template.php`</h5>
+
+    ```bash
+    fluent_crm/email_header
+    ```
+
+### `1` - Plain Template
+
+<h5>`wp-content\plugins\fluent-crm\app\views\emails\plain\Template.php`</h5>
+
+    ```bash
+    fluent_crm/email_header
+    ```
+
+### `1` - Raw Classic Template
+
+<h5>`wp-content\plugins\fluent-crm\app\views\emails\raw_classic\Template.php`</h5>
+
+    ```bash
+    fluent_crm/email_header
+    ```
+
+### `1` - Simple Template
+
+<h5>`wp-content\plugins\fluent-crm\app\views\emails\simple\Template.php`</h5>
+
+    ```bash
+    fluent_crm/email_header
+    ```
+
+### `2` - Confirmation
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\confirmation.php`</h5>
+
+    ```bash
+    fluent_crm/confirmation_head
+    fluent_crm/confirmation_footer
+    ```
+
+### `3` - Manage Subscription Request Form
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\manage_subscription_request_form.php`</h5>
+
+    ```bash
+    fluent_crm/manage_sub_request_head
+    fluent_crm/after_manage_sub_request_content
+    fluent_crm/manage_sub_request_footer
+    ```
+
+### `2` - Manage Subscription
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\manage_subscription.php`</h5>
+
+    ```bash
+    fluent_crm/manage_subscription_head
+    fluent_crm/manage_subscription_footer
+    ```
+
+### `3` - Pref Form
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\pref_form.php`</h5>
+
+    ```bash
+    fluent_crm/before_pref_form
+    fluent_crm/after_pref_form_fields
+    fluent_crm/after_pref_form
+    ```
+
+### `3` - Unsubscribe Request Form
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\unsubscribe_request_form.php`</h5>
+
+    ```bash
+    fluent_crm/unsubscribe_request_head
+    fluent_crm/after_unsubscribe_request_content
+    fluent_crm/unsubscribe_request_footer
+    ```
+
+### `6` - Unsubscribe
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\unsubscribe.php`</h5>
+
+    ```bash
+    fluent_crm/unsubscribe_head
+    fluent_crm/before_unsubscribe_content
+    fluent_crm/before_unsubscribe_form
+    fluent_crm/before_unsubscribe_submit
+    fluent_crm/after_unsubscribe_content
+    fluent_crm/unsubscribe_footer
+    ```
+
+### `5` - View on Browser
+
+<h5>`wp-content\plugins\fluent-crm\app\views\external\view_on_browser.php`</h5>
+
+    ```bash
+    fluent_crm/view_on_browser_head
+    fluent_crm/view_on_browser_before_heading
+    fluent_crm/view_on_browser_before_email_body
+    fluent_crm/view_on_browser_after_email_body
+    fluent_crm/view_on_browser_footer
+    ```
+
+### `3` - Boot App
+
+<h5>`wp-content\plugins\fluent-crm\boot\app.php`</h5>
+
+    ```bash
+    fluentcrm_loaded
+    fluentcrm_addons_loaded
+    fluent_crm/after_init
+    ```
+
+### `1` - WooCommerce Action Scheduler
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\action-scheduler.php`</h5>
+
+    ```bash
+    action_scheduler_pre_theme_init
+    ```
+
+### `1` - WooCommerce Action Scheduler Admin View
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_AdminView.php`</h5>
+
+    ```bash
+    action_scheduler_pastdue_actions_extra_notices
+    ```
+
+### `1` - WooCommerce Action Scheduler Async Request
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_AsyncRequest_QueueRunner.php`</h5>
+
+    ```bash
+    action_scheduler_run_queue
+    ```
+
+### `1` - WooCommerce Action Scheduler Fatal Error Monitor
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_FatalErrorMonitor.php`</h5>
+
+    ```bash
+    action_scheduler_unexpected_shutdown
+    ```
+
+### `3` - WooCommerce Action Scheduler Queue Cleaner
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueCleaner.php`</h5>
+
+    ```bash
+    action_scheduler_failed_{$context}_action_deletion
+    action_scheduler_reset_action
+    action_scheduler_failed_action
+    ```
+
+### `2` - WooCommerce Action Scheduler Queue Runner
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueRunner.php`</h5>
+
+    ```bash
+    action_scheduler_before_process_queue
+    action_scheduler_after_process_queue
+    ```
+
+### `7` - WooCommerce Action Scheduler Abstract Queue Runner
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php`</h5>
+
+    ```bash
+    action_scheduler_before_execute
+    action_scheduler_execution_ignored
+    action_scheduler_begin_execute
+    action_scheduler_after_execute
+    action_scheduler_failed_execution
+    action_scheduler_failed_validation
+    action_scheduler_failed_to_schedule_next_instance
+    ```
+
+### `2` - WooCommerce Action Scheduler Abstract Schema
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Abstract_Schema.php`</h5>
+
+    ```bash
+    action_scheduler_before_schema_update
+    action_scheduler/created_table
+    ```
+
+### `1` - WooCommerce Action Scheduler Store
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler_Store.php`</h5>
+
+    ```bash
+    action_scheduler_bulk_cancel_actions
+    ```
+
+### `2` - WooCommerce Action Scheduler
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\abstracts\ActionScheduler.php`</h5>
+
+    ```bash
+    action_scheduler_pre_init
+    action_scheduler_init
+    ```
+
+### `6` - WooCommerce Action Scheduler DB Store
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php`</h5>
+
+    ```bash
+    action_scheduler_stored_action
+    action_scheduler_failed_fetch_action
+    action_scheduler_canceled_action
+    action_scheduler_bulk_cancel_actions
+    action_scheduler_deleted_action
+    action_scheduler_completed_action
+    ```
+
+### `5` - WooCommerce Action Scheduler WP Post Store
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_wpPostStore.php`</h5>
+
+    ```bash
+    action_scheduler_stored_action
+    action_scheduler_failed_fetch_action
+    action_scheduler_canceled_action
+    action_scheduler_deleted_action
+    action_scheduler_completed_action
+    ```
+
+### `4` - WooCommerce Action Migrator
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\ActionMigrator.php`</h5>
+
+    ```bash
+    action_scheduler/no_action_to_migrate
+    action_scheduler/migrate_action_failed
+    action_scheduler/migrated_action
+    action_scheduler/migrate_action_incomplete
+    ```
+
+### `1` - WooCommerce Dry Run Action Migrator
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\DryRun_ActionMigrator.php`</h5>
+
+    ```bash
+    action_scheduler/migrate_action_dry_run
+    ```
+
+### `2` - WooCommerce Runner
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\Runner.php`</h5>
+
+    ```bash
+    action_scheduler/migration_batch_starting
+    action_scheduler/migration_batch_complete
+    ```
+
+### `1` - WooCommerce Migration Scheduler
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\migration\Scheduler.php`</h5>
+
+    ```bash
+    action_scheduler/migration_complete
+    ```
+
+### `2` - WooCommerce Action Scheduler WP CLI QueueRunner
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\WP_CLI\ActionScheduler_WPCLI_QueueRunner.php`</h5>
+
+    ```bash
+    action_scheduler_before_process_queue
+    action_scheduler_after_process_queue
+    ```
+
+### `1` - WooCommerce Action Scheduler ProgressBar
+
+<h5>`wp-content\plugins\fluent-crm\vendor\woocommerce\action-scheduler\classes\WP_CLI\ProgressBar.php`</h5>
+
+    ```bash
+    action_scheduler/progress_tick
+    ```
+
+### `1` - WPFluent Response
+
+<h5>`wp-content\plugins\fluent-crm\vendor\wpfluent\framework\src\WPFluent\Response\Response.php`</h5>
+
+    ```bash
+    litespeed_control_set_nocache
+    ```

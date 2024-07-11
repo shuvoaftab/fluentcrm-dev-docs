@@ -33,6 +33,7 @@ description: A collection of all  Hooks Filter for FluentCRM.
         'application/txt'
     ]);
     ```
+
 </li>
 <li>
     ## Menu URL Base
@@ -47,5 +48,83 @@ description: A collection of all  Hooks Filter for FluentCRM.
     ```php
     apply_filters('fluent_crm/menu_url_base', admin_url('admin.php?page=fluentcrm-admin#/'));
     ```
+
+</li>
+<li>
+    ## Change Unsubscribe Page Texts
+
+    ```bash
+    Location: wp-content\plugins\fluent-crm\app\Hooks\Handlers\ExternalPages.php
+    Line:     318
+    Version:  2.9.0
+    function update_fluentcrm_unsubscribe_texts( $messages )
+    ```
+
+    ```php
+    /**
+     * Change Unsubscribe Page Texts
+     * @param: array $messages array of Unsubscribe data
+     */
+    function update_fluentcrm_unsubscribe_texts( $messages ) {
+        $messages['heading'] = 'Unsubscribe Here!';
+        $messages['heading_description'] = 'Please tell us why are you leaving?';
+        $messages['email_label'] = 'Email Address';
+        $messages['reason_label'] = 'Please let us know a reason';
+        $messages['button_text'] = 'Unsub';
+
+        return $messages;
+    }
+    add_filter('fluent_crm/unsubscribe_texts', 'update_fluentcrm_unsubscribe_texts' );
+    ```
+
+</li>
+<li>
+    ## Add or Update Unsubscribe Reason
+
+    ```bash
+    Location: wp-content\plugins\fluent-crm\app\Hooks\Handlers\ExternalPages.php
+    Line:     484
+    Version:  2.9.0
+    function update_fluentcrm_unsubscribe_reasons( $reasons )
+    ```
+
+    ```php
+    /**
+    * Unsubscribe reasons
+    * @param array Unsubscribe Reasons
+    */
+    function update_fluentcrm_unsubscribe_reasons( $reasons ) {
+        $reasons['not_relevant'] = 'Emails are not relevant anymore'; // add new reason
+        $reasons['emails_spam'] = 'Your Emails are spam'; // update email-spam reason text
+
+        return $reasons;
+    }
+    add_filter('fluent_crm/unsubscribe_reasons', 'update_fluentcrm_unsubscribe_reasons');
+    ```
+
+</li>
+<li>
+    ## Unsubscribe message response
+
+    ```bash
+    Location: wp-content\plugins\fluent-crm\app\Hooks\Handlers\ExternalPages.php
+    Line:     578
+    Version:  2.9.0
+    function update_fluentcrm_unsubscribe_response( $message )
+    ```
+
+    ```php
+    /**
+    * Unsubscribe reasons
+    * @param string Unsubscribe message
+    */
+    function update_fluentcrm_unsubscribe_response( $message ) {
+        $message = 'Sorry to see you go, hope you will be back soon';
+
+        return $message;
+    }
+    add_filter('fluent_crm/unsub_response_message', 'update_fluentcrm_unsubscribe_response' );
+    ```
+
 </li>
 </ol>
