@@ -43,9 +43,9 @@
     /* Colors */
     --primary-color-hue: var(--color-hue-phpdocumentor-green, --color-hue-phpdocumentor-green);
     --primary-color-saturation: 57%;
-    --primary-color: hsl(var(--primary-color-hue), var(--primary-color-saturation), 60%);
-    --primary-color-darken: hsl(var(--primary-color-hue), var(--primary-color-saturation), 40%);
-    --primary-color-darker: hsl(var(--primary-color-hue), var(--primary-color-saturation), 25%);
+    --primary-color: #9C27B0;
+    --primary-color-darken: #673AB7;
+    --primary-color-darker: #3F51B5;
     --primary-color-darkest: hsl(var(--primary-color-hue), var(--primary-color-saturation), 10%);
     --primary-color-lighten: hsl(var(--primary-color-hue), calc(var(--primary-color-saturation) - 20%), 85%);
     --primary-color-lighter: hsl(var(--primary-color-hue), calc(var(--primary-color-saturation) - 45%), 97.5%);

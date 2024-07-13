@@ -57,3 +57,6 @@ li::marker {
 .sl-markdown-content h3:not(:where(.not-content *)) {
     font-size: 1.5rem !important;
 }
+.sl-markdown-content a:not(:where(.not-content *)) {
+    color: white;
+}
