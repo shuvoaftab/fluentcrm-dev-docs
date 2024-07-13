@@ -35,7 +35,7 @@ li::marker {
     font-size: 2rem;
 }
 
-.btn{
+.btn {
     background-color: var(--sl-color-accent);
     color: var(--sl-color-white);
     border: none;
@@ -48,7 +48,7 @@ li::marker {
     transition: background-color 0.3s;
     text-decoration: none;
 }
-.ast-primary{
+.ast-primary {
     font-size: 1.5rem;
 }
 .sl-markdown-content :is(h3) code {
